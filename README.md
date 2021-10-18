@@ -1,5 +1,6 @@
 # friendship-quiz
 Official repo for project friendship-quiz of ASITY
+just a demo edit
 
 fork it .
 pull it .
