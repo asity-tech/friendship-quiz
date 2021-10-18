@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Quiz</title>
+</head>
+
+<body>
+    <h2>You have to enter 5 questions</h2>
+
+    <form action="/quiz/<%=id%>/new_quiz" method="POST">
+        <section>
+            <input type="text" name="question" placeholder="Question 1" width="30px" />
+            <br>
+            <input type="text" name="o1" placeholder="option1" />
+            <input type="text" name="o2" placeholder="option2" />
+            <input type="text" name="o3" placeholder="option3" />
+            <input type="text" name="o4" placeholder="option4" />
+
+            <label for="correctAns">Select the correct option</label>
+            <select name="correctAns" id="correct">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <br /><br />
+        </section>
+        <!-- <section>
+            <input type="text" name="q2" placeholder="Question 2" width="30px" />
+
+            <input type="text" placeholder="option1" />
+            <input type="text" placeholder="option2" />
+            <input type="text" placeholder="option3" />
+            <input type="text" placeholder="option4" />
+            <br /><br />
+        </section>
+        <section>
+            <input type="text" name="q3" placeholder="Question 3" width="30px" />
+
+            <input type="text" placeholder="option1" />
+            <input type="text" placeholder="option2" />
+            <input type="text" placeholder="option3" />
+            <input type="text" placeholder="option4" />
+            <br /><br />
+        </section>
+        <section>
+            <input type="text" name="q4" placeholder="Question 4" width="30px" />
+
+            <input type="text" placeholder="option1" />
+            <input type="text" placeholder="option2" />
+            <input type="text" placeholder="option3" />
+            <input type="text" placeholder="option4" />
+            <br /><br />
+        </section>
+        <section>
+            <input type="text" name="q5" placeholder="Question 5" width="30px" />
+
+            <input type="text" placeholder="option1" />
+            <input type="text" placeholder="option2" />
+            <input type="text" placeholder="option3" />
+            <input type="text" placeholder="option4" />
+            <br /><br />
+        </section> -->
+
+
+
+        <!-- </form> -->
+
+
+        <h1>Or select from the available questions</h1>
+        <!-- <form action="/quiz/<%=id%>/new_quiz" method="POST"> -->
+        <% let index=0; for (instance of quesSet) { %>
+
+            <label for="ques_<%=index%>">
+                <%=instance.question%>
+                index = <%= index %> 
+            </label>
+            <input type="checkbox" name="ques_<%=index%>" id="q_<%=index%>" value="1" checked=<%= userQues.find(element => element ===index) != undefined ? true : false %> >
+
+            <% index++ } %>
+                <button>Submit</button>
+    </form>
+</body>
+
+</html>

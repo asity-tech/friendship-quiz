@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Play Quiz</title>
+</head>
+<body>
+    <h1>you are answering <%= user.username%>'s quiz </h1>
+    
+
+    <form action="/quiz/<%=user._id%>/score" method="POST">
+        <% for (item of quesSet) {  %>
+
+            <p> <%= item.question %> </p>
+            <label for="options">Choose an option</label>
+
+            <select name="options" id="cars">
+                <option value="1"><%= item.options[0]%>  </option>
+                <option value="2"><%= item.options[1]%></option>
+                <option value="3"><%= item.options[2]%></option>
+                <option value="4"><%= item.options[3]%></option>
+              </select>
+
+            
+        <% } %> 
+
+        <button>Submit Quiz</button>
+    </form>
+</body>
+</html>
