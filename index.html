@@ -10,7 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="styles.css" />
     <title>2</title>
     <style>
       body {
@@ -18,8 +18,14 @@
       }
     </style>
   </head>
-  <body class="d-flex flex-column justify-content-center align-items-center">
-    <div class="d-grid col-4 gap-3">
+  <body
+    class="d-flex flex-column justify-content-center align-items-center gap-5"
+  >
+    <div class="avatar d-flex justify-content-center align-items-center">
+      <img src="assets/avatar.png" class="avatar-img" alt="" />
+      <img src="assets/pulse.gif" alt="" class="avatar-pulse" />
+    </div>
+    <div class="d-grid col-10 gap-2">
       <div>
         <label for="exampleInputEmail1" class="form-label">Username</label>
         <input
@@ -29,11 +35,14 @@
           aria-describedby="emailHelp"
         />
       </div>
-      <button type="button" class="btn btn-primary col">Female</button>
-      <button type="button" class="btn btn-primary col">Male</button>
-      <a href="questions.html">
+      <div class="d-flex gap-2">
+        <button type="button" class="btn btn-light col">Female</button>
+        <button type="button" class="btn btn-light col">Male</button>
+      </div>
+      <a href="">
         <button type="button" class="btn btn-primary w-100">Next</button></a
       >
+      <!-- <p class="text-center fs-1">Powered by asity.tech</p> -->
     </div>
 
     <script
